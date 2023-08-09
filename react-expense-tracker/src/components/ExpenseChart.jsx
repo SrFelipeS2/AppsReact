@@ -3,11 +3,12 @@ import { useGlobalState } from "../context/GlobalState"
 
 function ExpenseChart() {
 
-  const {transactions} = useGlobalState()
+  const {transactions} = useGlobalState(100)
+  console.log(transactions)
 
   const totalIncome = transactions.filter(transaction=>transaction.amount > 0).reduce((acc, transaction)=>(acc+=transaction.amount),0);
   const totalExpense = transactions.filter(transaction=>transaction.amount < 0).reduce((acc, transaction)=>(acc+=transaction.amount),0)*-1;
-  const total = transactions.reduce((acc, transaction)=>(acc += transaction.amount),0)
+ 
   
   const totalExpensesPercentage = Math.round((totalExpense/totalIncome)*100)
   const totalIncomePercentage = 100-totalExpensesPercentage;
