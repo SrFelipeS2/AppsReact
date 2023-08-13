@@ -44,7 +44,7 @@ const Knowledge = () => {
           mix-blend-lighten mb-12 lg:mb-0'>
             <h2 className='h2 text-accent mb-6'>My certified knowledge</h2>
             <h3 className='h3 max-w-[455px] mb-16'>I'm Certified in:</h3>
-            <a className='py-3 btn btn-sm max-w-sm'  href='https://drive.google.com/drive/folders/1-WqMPket5WBdhmNdqHmThI6VRK1Zq6P8'>See all certificate</a>
+            <a className='py-3 btn btn-sm max-w-sm text-center'  href='https://drive.google.com/drive/folders/1-WqMPket5WBdhmNdqHmThI6VRK1Zq6P8'>See all certificate</a>
           </motion.div>
           <div className='flex-1'>
             <motion.div
@@ -64,7 +64,7 @@ const Knowledge = () => {
                       <a href={certified} className='btn w-9 h-9 mb-[10px] flex justify-center items-center'>
                         <BsArrowUpRight />
                       </a>
-                      <a href={certified} className='text-gradient text-sm'>{moreInfo}</a>
+                      <a href={certified} className='text-gradient text-sm text-center'>{moreInfo}</a>
                     </div>
                   </div>
                 )

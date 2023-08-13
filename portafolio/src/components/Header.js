@@ -11,7 +11,7 @@ const Header = () => {
           <img src={Logo} aly=''></img>
         </a>
         { }
-        <button className='btn btn-sm'>Work with me</button>
+        <a className='py-1 btn btn-sm md:py-4 text-center' href='https://wa.link/o4xur7'>Work with me</a>        
       </div>
     </div>
   </div>;

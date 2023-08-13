@@ -1,10 +1,8 @@
 import React from 'react';
-import { BsArrowUpRight } from 'react-icons/bs'
 import { motion } from 'framer-motion'
 import { fadeIn } from '../variants'
-import Img1 from '../assets/portfolio-img1.png';
 import Img2 from '../assets/portfolio-img2.png';
-import Img3 from '../assets/portfolio-img3.png';
+
 
 
 const Work = () => {
@@ -24,7 +22,7 @@ const Work = () => {
                 my Latest <br /> Work
               </h2>
               <p className='max-w-sm mb-10'>In my previous role as a software developer at BPMco, I applied my expertise as a technologist in computer systems analysis and development. I effectively managed complex databases, utilized advanced programming languages and paradigms, and successfully led a project for Guatemala. This project involved direct client interaction, requirement gathering, and tailored platform implementation. My contribution was recognized upon departure for exceeding expectations and making a positive impact..</p>
-              <button className='btn btn-sm'>View all projects</button>
+              <a href='https://drive.google.com/file/d/1PqDg2vUDyXvq1v-ii8is4CQ3_ob_bqJU/view?usp=drive_link' className='py-4 btn btn-sm text-center sm:text-[10px]'>personal/employment references</a>
             </div>     
           </motion.div>
           <motion.div
@@ -41,11 +39,11 @@ const Work = () => {
               <img className='group-hover:scale-125 transition-all duration-500' src={Img2} alt='' />
               {/*pretitle */}
               <div className='absolute -bottom-full left-12 group-hover:bottom-24 transition-all duration-500 z-50'>
-                <span className='text-gradient'>Ui/Ux design</span>
+                <span className='text-gradient'>BPMco</span>
               </div>
               {/*title*/}
               <div className='absolute -bottom-full left-12 group-hover:bottom-14 transition-all duration-700 z-50'>
-                <span className='text-3xl text-white'>project Title</span>
+                <span className='text-3xl text-white'>Recognition</span>
               </div>
             </div>        
           </motion.div>
