@@ -1,0 +1,7 @@
+{
+  "name": "ReactJavaIonicCurse",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite"
+}
