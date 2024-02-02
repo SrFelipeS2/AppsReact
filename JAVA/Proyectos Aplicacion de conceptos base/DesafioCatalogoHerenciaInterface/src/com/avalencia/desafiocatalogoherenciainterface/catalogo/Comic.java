@@ -20,4 +20,10 @@ public class Comic extends Libro implements IProducto {
     public double getPrecioVenta() {
         return super.getPrecioVenta();
     }
+
+    @Override
+    public void mostrarDetalles() {
+        super.mostrarDetalles();
+        System.out.println("Personaje: " + this.getPersonaje());
+    }
 }
