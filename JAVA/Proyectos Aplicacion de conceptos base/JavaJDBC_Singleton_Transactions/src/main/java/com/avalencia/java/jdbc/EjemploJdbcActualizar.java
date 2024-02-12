@@ -6,29 +6,28 @@ import com.avalencia.java.jdbc.repositorio.ProductoRepositorioImpl;
 import com.avalencia.java.jdbc.repositorio.Repositorio;
 import com.avalencia.java.jdbc.util.ConexionBaseDatos;
 
-import java.sql.*;
-import java.util.Date;
+import java.sql.Connection;
+import java.sql.SQLException;
 
-public class EjemploJdbc {
+public class EjemploJdbcActualizar {
     public static void main(String[] args) {
 
         try (Connection conn = ConexionBaseDatos.getInstance()){
             Repositorio<Producto> repositorio = new ProductoRepositorioImpl();
             System.out.println("==========Listar=========");
             repositorio.listar().forEach(System.out::println);
-            repositorio.listar().forEach(elemento -> System.out.println(elemento));
             System.out.println("==========Listar por id=========");
             System.out.println(repositorio.porId(2L));
-            System.out.println("==========Insertar nuevo producto=========");
+            System.out.println("==========Editar producto=========");
             Producto producto = new Producto();
+            producto.setId(19L);
             producto.setNombre("Teclado Razer");
             producto.setPrecio(550);
-            producto.setFechaRegistro(new Date());
             Categoria categoria = new Categoria();
-            categoria.setId(3L);
+            categoria.setId(1L);
             producto.setCategoria(categoria);
             repositorio.guardar(producto);
-            System.out.println("Producto guardado con exito");
+            System.out.println("Producto editado con exito");
             System.out.println("==========Listar=========");
             repositorio.listar().forEach(System.out::println);
 
